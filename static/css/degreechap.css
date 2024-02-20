@@ -1,0 +1,31 @@
+.chaplist {
+    margin-top: 120px;
+    padding: 30px 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chaplist h1 {
+    margin: 10px;
+}
+.chaplist h2 {
+    margin: 10px;
+}
+
+.chaplist a {
+    width: 500px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid none;
+    padding: 15px;
+    margin: 5px 0px;
+    background-color: #2a2a2a;
+    transition: all 80ms ease-in-out 0s;
+}
+
+.chaplist a:hover {
+    transform: scale(1.03) translateX(-1px);
+    box-shadow: 1px 25px 45px rgba(0, 0, 0, 0.846);
+}
+

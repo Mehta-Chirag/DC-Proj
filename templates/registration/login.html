@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+    <form class = "form" method="post" action="{% url 'login' %}">
+        <h1>Login</h1>
+        {% csrf_token %}
+        <div>
+            <!-- {{ form.username.label_tag }} -->
+            <input type="text" placeholder="Username" name="username" maxlength="150" id="id_username" required />
+        </div>
+        <div>
+            <!-- {{ form.password.label_tag }} -->
+            <input type="password" placeholder="Password" name="password" id="id_password" required />
+        </div>
+        {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+        <p>
+            {{ error|escape }}
+        </p>
+        {% endfor %} {% endif %}
+        <button type="submit">Login</button>
+        <a href="{% url 'register'%}">Signup</a>
+    </form>
+
+</body>
+
+{% endblock %}
